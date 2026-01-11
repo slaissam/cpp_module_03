@@ -10,7 +10,7 @@ private:
     int energy_Point;
     int attack_Damage;
 public:
-    ClapTrap();
+    ClapTrap(const ClapTrap& other);
     ClapTrap(std::string name);
     ClapTrap& operator=(const ClapTrap& other);
     ~ClapTrap();
