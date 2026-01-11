@@ -23,29 +23,39 @@ ClapTrap::~ClapTrap() {
     std::cout << "Destructor called for " << name << std::endl;
 }
 
+
+
+
+
+
+
+
 void ClapTrap::attack(const std::string& target) {
-    if (energy_Point > 0 && hit_Point > 0) {
+    if (energy_Point > 0 && hit_Point > 0) 
+    {
         energy_Point--;
         std::cout << "ClapTrap " << name << " attacks " << target  << ", causing " << attack_Damage << " points of damage!"  << std::endl;
-    } else {
+    } 
+    else
         std::cout << "ClapTrap " << name << " has insufficient energy or hit points to attack." << std::endl;
-    }
 }
 void ClapTrap::takeDamage(unsigned int amount) {
     hit_Point -= amount;
-    if (hit_Point < 0) hit_Point = 0;
+    if (hit_Point < 0)
+        hit_Point = 0;
     std::cout << "ClapTrap " << name << " takes " << amount
               << " points of damage! (Hit points left: " << hit_Point << ")" << std::endl;
 }
 void ClapTrap::beRepaired(unsigned int amount) {
-    if (energy_Point > 0 && hit_Point > 0) {
+    if (energy_Point > 0 && hit_Point > 0)
+    {
         hit_Point += amount;
         energy_Point--;
         std::cout << "ClapTrap " << name << " is repaired by " << amount
                   << " points! (Hit points: " << hit_Point
                   << ", Energy left: " << energy_Point << ")" << std::endl;
-    } else {
+    } 
+    else
         std::cout << "ClapTrap " << name << " has insufficient energy or hit points to be repaired." << std::endl;
-    }
 }
 

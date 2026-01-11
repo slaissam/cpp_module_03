@@ -11,7 +11,7 @@ private:
     int attack_Damage;
 public:
     ClapTrap(const ClapTrap& other);
-    ClapTrap(std::string name);
+    ClapTrap(std::string name= "Default");
     ClapTrap& operator=(const ClapTrap& other);
     ~ClapTrap();
     void attack(const std::string& target);

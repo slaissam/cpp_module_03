@@ -1,20 +1,17 @@
 # ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
+
+#include "ClapTrap.hpp"
 #include <iostream>
 
-class FragTrap
+class FragTrap : public ClapTrap
 {
-protected:
-    std::string name;
-    int hit_Point;
-    int energy_Point;
-    int attack_Damage;
-public:
-    FragTrap();
-    FragTrap(std::string name);
-    FragTrap& operator=(const FragTrap& other);
-    ~ClapTrap();
-
+    public:
+        FragTrap(std::string name = "Default");
+        FragTrap(const FragTrap& other);
+        FragTrap& operator=(const FragTrap& other);
+        ~FragTrap();
+        void highFivesGuys();
 };
 
 #endif

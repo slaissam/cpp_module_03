@@ -4,10 +4,12 @@
 int main() {
     ClapTrap ct1("SALAH");
     ScavTrap st1("SCAVVTRAP");
-    st1.guardGate();
-    ct1.attack("ENEMY1");
-    ct1.takeDamage(5);
-    st1.attack("ENEMY2");
+    std::cout << "-------------------" << std::endl;    
+    // st1.guardGate();
+    // ct1.attack("ENEMY1");
+    // ct1.takeDamage(5);
+    // st1.attack("ENEMY2");
+    ScavTrap st2(st1);
     ct1.beRepaired(3);
     st1.takeDamage(9);
     

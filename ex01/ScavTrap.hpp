@@ -5,7 +5,8 @@
 
 class ScavTrap : public ClapTrap {
     public:
-        ScavTrap(std::string name);
+        ScavTrap(std::string name = "Default");
+        ScavTrap(const ScavTrap& other);
         ScavTrap& operator=(const ScavTrap& other);
         ~ScavTrap();
         void guardGate();
